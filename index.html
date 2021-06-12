@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!-- 
+  1) гласная a,e,i,o,u ( проверить один символ) [aeiou]
+  2) p+гласная+t (проверить слово)              p[aeiou]t
+  3) не содержит гласных (символ не гласная)    [^aeiou]
+  4) только спецсимволы (несколько подряд идущих символов 
+     содержат только спецсимволы )              ^\W+$
+  5) трехзначное число (сокращенная запись)     \d{3}
+  6) все пробелы (подрядидущие пробелы)         \s+
+  7) все символы кроме пробелов (в строке нет пробелов) ^\S+$
+  ---8) ссылки с example.com --- 
+  9) комбинации A+ (все строки, начинающиеся с А, потом любые символы) A.*
+  10) комбинации user $user  (поиск как user, так и $user)
+  ---11) комбинации // comment ---
+  ---12) комбинации слов в * ---
+  *sdfsSdSSSdeCfsdf* *dd* *s* 
+-->
+
+  <!-- 
+  <form action="#" method="POST">
+    <label for="name">Name</label>
+    <input id="name" type="text">
+  </form> -->
+
+  <!-- <input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week"> -->
+
+  <!-- elements:form input label
+  attributes: placeholder autofocus required checked autocomplete
+  validation: min max required step maxlength -->
+
+  <form action="#" method="GET">
+    <fieldset>
+      <legend>Text types</legend>
+      <label>
+        <span>Name</span>
+        <input type="text" placeholder="Firstname" autofocus required pattern="[A-Z][a-z]{0,19}(-[A-Z][a-z]{0,19})?">
+      </label>
+      <br>
+      <label>
+        <span>Email</span>
+        <input type="email" placeholder="example@example.com">
+      </label>
+      <br>
+      <label>
+        <span>Password</span>
+        <input type="password">
+      </label>
+      <br>
+      <label>
+        <span>URL</span>
+        <input type="url">
+      </label>
+      <br>
+      <label>
+        <span>Search</span>
+        <input type="search">
+      </label>
+      <br>
+
+      <label>
+        <span>Tel</span>
+        <input type="tel" autocomplete="on">
+      </label>
+    </fieldset>
+
+    <label>
+      <span>Choose file</span>
+      <input type="file" multiple>
+    </label>
+
+    <br>
+
+    <label>
+      <span>Color</span>
+      <input type="color">
+    </label>
+
+    <fieldset>
+      <legend>Date/time</legend>
+      <input type="date">
+      <input type="datetime">
+      <input type="datetime-local">
+      <input type="time">
+      <input type="month">
+      <input type="week">
+    </fieldset>
+
+    <label>
+      <span>Hidden</span>
+      <input type="hidden" value="Earth">
+    </label>
+
+
+    <fieldset>
+      <legend>Numbers</legend>
+      <label>
+        <span>Number</span>
+        <input type="number" min="1" max="100" step="2">
+        <input type="range" min="1" max="100">
+      </label>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>Gender</legend>
+      <input type="radio" name="gender" value="male" id="male">
+      <label for="male">Male</label>
+      <br>
+      <input type="radio" name="gender" value="female" id="female">
+      <label for="female">Famale</label>
+      <br>
+      <input type="radio" name="gender" value="other" id="other" checked>
+      <label for="other">Other</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferences</legend>
+      <input type="checkbox" name="prefs" value="sport" id="idSport" checked>
+      <label for="idSport">Sport news</label>
+      <br>
+      <input type="checkbox" name="prefs" value="it" id="idIt" checked>
+      <label for="idIt">IT news</label>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>Buttons</legend>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+
+      <input type="button" value="inputButton">
+      <input type="submit" value="inputSubmit">
+      <input type="reset" value="inputReset">
+      <input type="image" src="./imgs/send.svg" alt="send">
+    </fieldset>
+
+
+  </form>
+
+</body>
+
+</html>
